@@ -4,7 +4,7 @@ import { Fragment } from "react/cjs/react.production.min";
 import AlbumView from "./components/AlbumView";
 import ArtistView from "./components/ArtistView";
 import Gallery from "./components/Gallery";
-import Searchbar from "./components/Searchbar";
+import SearchBar from "./components/SearchBar";
 import { DataContext } from "./context/DataContext";
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
                   path="/"
                   element={
                      <Fragment>
-                        <Searchbar handleSearch={handleSearch} />
+                        <SearchBar handleSearch={handleSearch} />
                         <DataContext.Provider value={data}>
                            <Gallery />
                         </DataContext.Provider>
