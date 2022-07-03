@@ -2,6 +2,7 @@
 // component to serve specific data about our artist
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import NavButtons from "./NavButtons";
 
 function ArtistView() {
    const { id } = useParams();
@@ -37,6 +38,7 @@ function ArtistView() {
       <div>
          <h2>Passed id: {id}</h2>
          <p>Artist Data Goes Here!</p>
+         <NavButtons />
          {renderAlbums}
       </div>
    );
