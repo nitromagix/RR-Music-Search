@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 // Gallery.js
 import { useContext } from 'react'
 import { DataContext } from '../context/DataContext'
-=======
->>>>>>> 676501d9bdc3e8cc8cf572fa6811b4f1ca1f8b1b
 import GalleryItem from './GalleryItem'
 
 function Gallery(){
