@@ -12,7 +12,7 @@ function App() {
    let [message, setMessage] = useState("Search for Music!");
    let [data, setData] = useState([]);
 
-   const API_URL = "https://itunes.apple.com/search?term=";
+   const API_URL = "http://localhost:4444/search/";
 
    useEffect(() => {
       if (search) {
