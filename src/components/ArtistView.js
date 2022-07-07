@@ -28,11 +28,9 @@ function ArtistView() {
       const fetchData = async () => {
          const response = await fetch(API_URL);
          const responseData = await response.json();
-         // console.log(responseData);
          setArtistData(responseData.results);
       };
       fetchData();
-      console.log(artistData)
    }, [id]);
 
    return (
