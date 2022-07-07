@@ -14,16 +14,6 @@ function ArtistView() {
       (entry) => entry.collectionType === "Album"
    );
 
-   useEffect(() => {
-      const fetchData = async () => {
-         const response = await fetch(API_URL);
-         const responseData = await response.json();
-         // console.log(responseData);
-         setArtistData(responseData.results);
-      };
-      fetchData();
-   }, [id]);
-
    const renderAlbums = justAlbums.map((album, i) => {
       return (
          <div key={i}>
@@ -34,10 +24,21 @@ function ArtistView() {
       );
    });
 
+   useEffect(() => {
+      const fetchData = async () => {
+         const response = await fetch(API_URL);
+         const responseData = await response.json();
+         // console.log(responseData);
+         setArtistData(responseData.results);
+      };
+      fetchData();
+      console.log(artistData)
+   }, [id]);
+
    return (
       <div>
          <h2>Passed id: {id}</h2>
-         <p>Artist Data Goes Here!</p>
+         <p>{artistData[0] ? artistData[0].artistName : ''}</p>
          <NavButtons />
          {renderAlbums}
       </div>
